@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="text-white bg-[#FFFFFF] font-sans overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full text-black z-50 px-6 transition-all duration-500 ease-in-out">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold">MyPortfolio</a>
+      <nav class="space-x-4" >
+        <!-- <a href="#about" class="hover:text-teal-400">About</a> -->
+        <a href="#projects" class="hover:text-teal-400">Projects</a>
+        <a href="#skills" class="hover:text-teal-400">Skills</a>
+        <a href="#contact" class="hover:text-teal-400">Snippets</a>
+      </nav>
+      <button class="border px-6 py-3">Let's talk</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen w-full text-black flex items-center px-4" id="hero">
+    <div class="px-20 text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-3">Hi, I'm Prathamesh,</h1>
+      <h1 class="text-4xl md:text-6xl font-bold mb-3">
+     ><span id="typewriter" class="text-teal-400"></span>
+      </h1>
+      <h1 class="text-4xl md:text-6xl font-bold text-left">Based in India</h1>
+      <p class="text-gray-400 mt-6 w-200">As a third-year engineering student with a passion for front-end development, I love crafting creative and interactive websites that bring ideas to life.</p>
+      <div class="flex gap-6 mt-6">
+        <a href="#projects" class="inline-block bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 rounded-full">
+            View Projects
+        </a>
+        <a href="/YCAP Resume (1).pdf" target="_blank" rel="noopener noreferrer" class="inline-block border border-teal-500 text-teal-500 px-6 py-3 rounded-full">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <!-- <section class="bg-zinc-700 w-full min-h-screen" id="about">
+    
+  </section> -->
+
+  <!-- Projects Section -->
+<!-- Projects Section -->
+<section class="bg-[#FBF5FF] w-full min-h-screen px-0" id="projects">
+    <div class="h-[300vh] relative">
+      <!-- Sticky inner wrapper -->
+      <div class="sticky top-0 h-screen flex items-center justify-center">
+        <div class="text-8xl font-bold tracking-tighter w-1/2 px-20">
+            <h1 class="text-[#17082F]">ABOUT THE</h1> 
+            <label id="pro" class="text-shadow-lg text-[#FBF5FF]">PROJECT</label>
+        </div>
+        <div id="project-slider" class="w-1/2 h-full flex flex-col items-center justify-center px-6  text-black">
+          <!-- One project shown at a time -->
+          <div class="project-item absolute opacity-0" id="project-1">
+            <!-- Your existing Project 1 content -->
+            <h1 class="text-[#FF5766] text-4xl font-bold mt-10 mb-6 uppercase ">Clothx</h1>
+        <p class="mb-6">Clothx is a smart clothing search platform where users can enter what they're looking for—like "red hoodie" or "formal shoes"—and see matching results from multiple e-commerce sites in one place. It also features a virtual try-on tool, so users can preview how clothes might look before buying. Designed to make online fashion shopping easier, faster, and more interactive.
+
+        </p>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6">Technologies</h1>
+        <div class="flex gap-6">
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="">
+                <h1 class="text-center">Figma</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000" alt="">
+                <h1 class="text-center">React</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="">
+                <h1 class="text-center">Python</h1>
+            </div>
+        </div>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6 mt-6">What i did</h1>
+        <h1 class="uppercase font-medium text-xl">frontend + authorisation</h1>
+        
+        <div class="mt-15">
+            <a href="https://github.com/prathamesh0225/fashion-assistant.git" target="_blank" rel="noopener noreferrer" class="uppercase text-2xl font-bold border px-6 py-4 rounded-full text-[#FF5766] ">Github</a>
+        </div>
+          </div>
+  
+          <div class="project-item absolute opacity-0" id="project-2">
+            <h1 class="text-[#FF5766] text-4xl font-bold mt-10 mb-6 uppercase">Student Resource Management</h1>
+        <p class="mb-6">A web app designed to help students easily upload, find, and share study materials like PDFs and images. Users can browse resources by college, branch, or semester, while admins can review and manage uploaded content. Built using React, Vite, Supabase, and AWS S3, with secure login and a clean, user-friendly interface.</p>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6">Technologies</h1>
+        <div class="flex gap-6">
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000" alt="">
+                <h1 class="text-center">React</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000" alt="">
+                <h1 class="text-center">Vite</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=sH0rW2TvYdr9&format=png&color=000000" alt="">
+                <h1 class="text-center">Supabase</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" alt="">
+                <h1 class="text-center">AWS S3</h1>
+            </div>
+        </div>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6 mt-6">What i did</h1>
+        <h1 class="uppercase font-medium text-xl">frontend + backend + database</h1>
+        
+        <div class="mt-15">
+            <a href="https://github.com/prathamesh0225/student-resource-management.git" target="_blank" rel="noopener noreferrer" class="uppercase text-2xl font-bold border px-6 py-4 rounded-full text-[#FF5766] ">Github</a>
+        </div>
+          </div>
+  
+          <!-- <div class="project-item absolute opacity-0" id="project-3">
+            <h1 class="text-[#FF5766] text-4xl font-bold mt-10 mb-6 uppercase">Project Three</h1>
+            <p>Description of the third project...</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- <section class="bg-[#FBF5FF] w-full min-h-screen py-20 px-20 flex wrap" id="projects">
+    <div class="text-8xl font-bold tracking-tighter w-1/2">
+        <h1 class="text-[#17082F]">ABOUT THE</h1> 
+        <label id="pro" class="text-shadow-lg text-[#FBF5FF]">PROJECT</label>
+    </div>
+    <div class="text-black w-1/2">
+        <h1 class="text-[#FF5766] text-4xl font-bold mt-10 mb-6 uppercase">Clothx</h1>
+        <p class="mb-6">GrowPro is a platform for international educational experiences. With GrowPro, you can study and work in countries such as Australia, New Zealand, Canada, the United States, Ireland, or Malta.</p>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6">Technologies</h1>
+        <div class="flex gap-6">
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="">
+                <h1 class="text-center">Figma</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000" alt="">
+                <h1 class="text-center">React</h1>
+            </div>
+            <div>
+                <img class="w-15" src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="">
+                <h1 class="text-center">Python</h1>
+            </div>
+        </div>
+        <h1 class="uppercase font-bold text-2xl text-[#AF2EFF] mb-6 mt-6">What i did</h1>
+        <h1 class="uppercase font-medium text-xl">design + development</h1>
+        
+        <div class="mt-15">
+            <a href="https://github.com/prathamesh0225/fashion-assistant.git" target="_blank" rel="noopener noreferrer" class="uppercase text-2xl font-bold border px-6 py-4 rounded-full text-[#FF5766] ">Github</a>
+        </div>
+    </div>
+  </section> -->
+
+  <!-- Skill Section -->
+  <section class="bg-teal-500 w-full min-h-screen" id="skills">
+    
+  </section>
+
+  <footer class="text-center py-6 text-gray-500 text-sm bg-gray-900">
+    © 2025 Prathamesh Pawar. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

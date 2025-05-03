@@ -1,0 +1,16 @@
+/* style.css - Custom styles if needed */
+html {
+    scroll-behavior: smooth;
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+
+#pro {
+    -webkit-text-stroke: 2px #17082F;
+
+}  
+.project-item {
+    transition: opacity 0.5s ease;
+    z-index: 0;
+  }
+  
