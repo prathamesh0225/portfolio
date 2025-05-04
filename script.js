@@ -147,3 +147,114 @@ function showProject(activeIndex) {
     }
   });
 }
+
+//skills animation
+
+gsap.registerPlugin(ScrollTrigger);
+
+let skillsWrapper = document.querySelector("#skillsWrapper");
+let panels = gsap.utils.toArray(".skill-panel");
+
+gsap.to(skillsWrapper, {
+  xPercent: -25 * (panels.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#skills",
+    pin: true,
+    scrub: 2,
+    // end: () => "+=" + (window.innerWidth * (panels.length - 1)), // Correct end value
+  },
+});
+
+
+//  progress animation
+gsap.utils.toArray(".progress-bar").forEach((bar) => {
+    const percent = bar.getAttribute("data-percent");
+    const fill = bar.querySelector(".progress-fill");
+  
+    gsap.fromTo(
+      fill,
+      { width: "0%" },
+      {
+        width: percent + "%",
+        scrollTrigger: {
+          trigger: bar,
+          start: "top 250%",
+          scrub: true,
+        },
+      }
+    );
+  });
+
+//contact section
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate the entire contact section (fade & scale in)
+gsap.from("#contact", {
+  opacity: 0,
+  scale: 0.95,
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top 80%",
+    toggleActions: "play none none reset",
+  },
+});
+
+// Animate the left info panel (from left)
+gsap.from("#contact .max-w-6xl > div:first-child", {
+  x: -100,
+  opacity: 0,
+  duration: 1,
+  delay: 0.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top 80%",
+    toggleActions: "play none none reset",
+  },
+});
+
+// Animate the form (from right)
+gsap.from("#contact form", {
+  x: 100,
+  opacity: 0,
+  duration: 1,
+  delay: 0.4,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top 80%",
+    toggleActions: "play none none reset",
+  },
+});
+
+// Animate each input/textarea/button with staggered effect
+gsap.from("#contact input, #contact textarea, #contact button", {
+  y: 30,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out",
+  stagger: 0.15,
+  scrollTrigger: {
+    trigger: "#contact form",
+    start: "top 85%",
+    toggleActions: "play none none reset",
+  },
+});
+
+// emailjs connections
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_gueu7ub", "template_hl3pcrc", this)
+      .then(function () {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function (error) {
+        alert("❌ Failed to send message: " + JSON.stringify(error));
+      });
+  });
